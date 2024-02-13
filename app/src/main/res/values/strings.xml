@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">mp23</string>
+    <string name="masculino">Hombre</string>
+    <string name="femenino">Femenino</string>
+    <string name="altura">Altura</string>
+    <string name="peso">Peso</string>
+    <string name="edad">Edad</string>
+    <string name="calcular">Calcular</string>
+    <string name="Recalcular">Re-Calcular</string>
+    <string name="resultado">Resultado</string>
+
+    <string name="error">Error</string>
+    <string name="title_bajo_peso">Bajo Peso</string>
+    <string name="Descricption_bajo_peso">Estas por debajo del peso optimo</string>
+
+    <string name="title_normal_peso">Peso Normal</string>
+    <string name="Descricption_Normal_peso">Estas optimo en tu peso</string>
+
+    <string name="title_alto_peso">Alto Peso</string>
+    <string name="Descricption_alto_peso">Estas con sobre peso</string>
+
+    <string name="title_Sobrealto_peso">Alto Peso</string>
+    <string name="Descricption_Sobrealto_peso">Estas con sobre peso</string>
+
+</resources>
