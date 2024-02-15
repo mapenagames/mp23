@@ -1,5 +1,5 @@
 package com.twity.mp23
-//video 7:14
+//video 7:58
 //*********
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
