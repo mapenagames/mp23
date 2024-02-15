@@ -21,5 +21,9 @@
 
     <string name="title_Sobrealto_peso">Alto Peso</string>
     <string name="Descricption_Sobrealto_peso">Estas con sobre peso</string>
+<!--    TodoApp-->
+    <string name="Todo_BienVenido">Bien Venidos</string>
+    <string name="Todo_Categoria">Categorias:</string>
+    <string name="Todo_Tarea">Tareas:</string>
 
 </resources>
