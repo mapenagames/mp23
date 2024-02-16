@@ -7,7 +7,10 @@ import com.twity.mp23.R
 
 
 // la clase CategoryAdapter nos permite mostrar la lista
-class CategoryAdapter(private val categories: List<TaskCatogory>) :
+class CategoryAdapter(
+    private val categories: List<TaskCategory>,
+    private val onItemSelected: (Int) -> Unit
+) :
     RecyclerView.Adapter<CategoriesViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoriesViewHolder {
         val view =
@@ -16,7 +19,9 @@ class CategoryAdapter(private val categories: List<TaskCatogory>) :
     }
 
     override fun onBindViewHolder(holder: CategoriesViewHolder, position: Int) {
-        holder.render(categories[position])
+        holder.render(categories[position],onItemSelected)
+        //onTemSelected esta sin parentesis porque se lo estoy mandando.
+        // si estuviera con parentesis como una funcion lo estaria ejecutando
     }
 
     /* getItemCount es para idicar cuantes lineas se desea mostrar,

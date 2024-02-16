@@ -26,4 +26,10 @@
     <string name="Todo_Categoria">Categorias:</string>
     <string name="Todo_Tarea">Tareas:</string>
 
+    <string name="Todo_Dialog">Agregar Tarea:</string>
+    <string name="Todo_Dialog_Category_Business">Negocios:</string>
+    <string name="Todo_Dialog_Category_Personal">Personal:</string>
+    <string name="Todo_Dialog_Category_Other">Otros:</string>
+    <string name="Todo_Dialog_Category_CrearTarea">CREAR TAREA:</string>
+
 </resources>
