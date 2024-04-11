@@ -20,15 +20,15 @@ fun main() {
 }
 
 fun printNotificationSumary(numberOfMessages: Int) {
-    var result : String
+    var result: String
     if (numberOfMessages > 99) {
-       result = "+99 como cantidad de notificaciones"
-    }else{
-     //   result = numberOfMessages.toString() + " cantidad de notificaciones"
-     //   tambien se pede hacer asi:
+        result = "+99 como cantidad de notificaciones"
+    } else {
+        //   result = numberOfMessages.toString() + " cantidad de notificaciones"
+        //   tambien se pede hacer asi:
         result = "$numberOfMessages cantidad de notificaciones"
 
     }
-    println (result)
+    println(result)
 }
 

@@ -1,6 +1,33 @@
 package com.twity.androidmaster.sintaxis
 
 fun main() {
+/* al definir una variable de string con el signo?  significa que puede tener el valor null */
+
+    var nombre:String? = "Pedro"
+    println("1el nombre: $nombre")
+    println("1el largo es: ${nombre?.length}")
+    nombre  = null
+    println("2el nombre: $nombre")
+    println("2el largo es: ${nombre?.length}") /* devuelve el texto null y no cancela*/
+
+    /* se puede ver como se puede resumir el if siguiente a una sola linea */
+    if (nombre!=null){
+        println("3el largo es: ${nombre?.length}")
+    }else{
+        println("esta variable es nula")
+    }
+    println("operador elvis.......")
+    /*                                  condicion  "?:"         */
+    /*                                      |                   */
+    /*                                      |                   */
+    /*                     antes del   ---> ?: <---    despues  */
+    /*                          por true    |  por false        */
+    /*                          |           V  |                */
+    /*                          V           V  V                */
+    println("el largo es :${nombre?.length}"?:"la variable es nula" )
+    /*-------------*/
+
+
     var xx: String = "Marcelo"
     println(xx[1])
     //esto es lo mismo que el xx[1]
@@ -26,3 +53,4 @@ fun main() {
     //                   -> por else de la condicion retornar el "es un valor nulo"
 
 }
+

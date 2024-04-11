@@ -1,6 +1,9 @@
 package com.twity.mp23
-//video 7:58
+//alt + mouse
+// control ....bbbbb/
+/* control + shit + / */
 //*********
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -38,4 +41,7 @@ class MenuActivity : AppCompatActivity() {
         val intent = Intent(this, TodoActivity::class.java)
         startActivity(intent)
     }
+}
+
+class perro(var nombre: String, var nota1: Double, var nota2: Double, var nota3: Double) {
 }

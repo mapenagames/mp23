@@ -10,10 +10,17 @@ package com.twity.androidmaster.sintaxis
 var varGlobal: Int = 30
 
 fun main() {
-    //val actuan como constantes
-    //var actuan como variables
+    //val pepe:String = "aa"       actuan como constantes. el valor se pude definir en tiempo de ejecucion
+    //const val pepe = 10 + 10     el valor se define en tiempo de compilacion, por tal motivo
+    //                             ocupan menos memoria
+    //var pepe:String = "aa"       actuan como variables y se pueden modificar
 
     //variables
+
+    var fecha = "05/10/2024"
+    var mes = fecha.substring(3,5)
+    println("mes: $mes")
+
     println("var varGlobal:" + varGlobal.toString())
     println("var varGlobal: ${varGlobal.toString()}")
     //variablesNumericas()
