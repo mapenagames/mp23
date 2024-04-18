@@ -8,38 +8,6 @@ package com.twity.androidmaster.sintaxis
  */
 //varaibles global
 var varGlobal: Int = 30
-
-fun main() {
-    //val pepe:String = "aa"       actuan como constantes. el valor se pude definir en tiempo de ejecucion
-    //const val pepe = 10 + 10     el valor se define en tiempo de compilacion, por tal motivo
-    //                             ocupan menos memoria
-    //var pepe:String = "aa"       actuan como variables y se pueden modificar
-
-    //variables
-
-    var fecha = "05/10/2024"
-    var mes = fecha.substring(3,5)
-    println("mes: $mes")
-
-    println("var varGlobal:" + varGlobal.toString())
-    println("var varGlobal: ${varGlobal.toString()}")
-    //variablesNumericas()
-    //variablesBoolean()
-    //variablesString()
-    showMyName("marcelo")
-    showMyAge(30)
-    add(10, 20)
-
-    println("resto:" + subtract(10, 5).toString())
-    println("restoCool:" + subtractCool(50, 5).toString())
-
-    showVarByDefault(50)
-    showVarByDefault()
-//  funcion lamda
-
-
-}
-
 fun showVarByDefault(valordefault: Int = 30) {
     println("valor de default $valordefault")
     varGlobal = varGlobal + 1
@@ -120,3 +88,58 @@ fun variablesString() {
     println("unoString + dosString: " + (unoString + dosString).toString())
 
 }
+fun main() {
+    //val pepe:String = "aa"       actuan como constantes. el valor se pude definir en tiempo de ejecucion
+    //const val pepe = 10 + 10     el valor se define en tiempo de compilacion, por tal motivo
+    //                             ocupan menos memoria
+    //var pepe:String = "aa"       actuan como variables y se pueden modificar
+
+    //variables
+
+    var fecha = "05/10/2024"
+    var mes = fecha.substring(3,5)
+    println("mes: $mes")
+
+    println("var varGlobal:" + varGlobal.toString())
+    println("var varGlobal: ${varGlobal.toString()}")
+    variablesNumericas()
+    variablesBoolean()
+    variablesString()
+    showMyName("marcelo")
+    showMyAge(30)
+    add(10, 20)
+
+    println("resto:" + subtract(10, 5).toString())
+    println("restoCool:" + subtractCool(50, 5).toString())
+
+    showVarByDefault(50)
+    showVarByDefault()
+
+    println(" ")
+    println("destructuracion")
+    // se lo utiliza para asignar variables locales variables de objetos
+    println("***************")
+
+
+    var sol :star = star("sol",12345f,"via lactea")
+    println(sol)
+    //asigno 3 variables de los atributos de una clase o objeto
+    var (name2,radius2,galaxy2) = star("sol",12345f,"via lactea")
+    println("name2: $name2, radius2: $radius2, galaxy2: $galaxy2")
+
+    //asigno 2 variables de los atributos de una clase o objeto
+    var (name3,radius3) = star("sol",12345f,"via lactea")
+    println("name3: $name3, radius3: $radius3 ")
+
+    //asigno 2 variables de los atributos de una clase o objeto, el 1ro y el ultimo atributo
+    //como se ve en el ejemplo siguiente, al no usar la variable radius que esta en el medio
+    // de los atributos de la clase, entonces se escribe "_" para indicar que no se usa esa posicion
+    // en la sentencia var
+
+    var (name4,_,galaxy4) = star("sol",12345f,"via lactea")
+    println("name4: $name4, galaxy4: $galaxy4 ")
+
+
+}
+
+data class star(val name:String, val radius:Float, val galaxy:String ){}

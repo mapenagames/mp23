@@ -19,6 +19,14 @@ private fun resta(x: Int, y: Int): Int {
     return x - y
 }
 
+private fun recorrerarray(a: IntArray, fn: (Int) -> Unit){
+    var contador = 0
+    for (i in a) {
+        contador += 1
+        println("elemnto del array $contador:  con valor: $i ")
+        fn(i)
+    }
+}
 fun main() {
     println("Funciones lambdas")
     // se pasa una funcion "suma" como parametro
@@ -73,4 +81,19 @@ fun main() {
     //valor o dato                 V  V  V
     var array6 = IntArray(5) { i -> i*3 }
     for (x in 0..4) print(" " + array6.elementAt(x).toString())
+
+    println("\n array7")
+    // en este caso vemos como una lambda accede a una variable "suma" fuera de la funcion
+    /*
+       private fun recorrerarray(a: IntArray, fn: (Int) -> Unit){
+          for (i in a)
+             fn(i)
+       }
+    */
+    var array7 = IntArray(10) { 1 }
+    var suma = 0
+    recorrerarray(array7) {suma += it}
+    println("suma : $suma")
+
 }
+
