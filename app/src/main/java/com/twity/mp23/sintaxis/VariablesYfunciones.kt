@@ -123,6 +123,9 @@ fun main() {
 
     var sol :star = star("sol",12345f,"via lactea")
     println(sol)
+
+
+
     //asigno 3 variables de los atributos de una clase o objeto
     var (name2,radius2,galaxy2) = star("sol",12345f,"via lactea")
     println("name2: $name2, radius2: $radius2, galaxy2: $galaxy2")
@@ -135,10 +138,20 @@ fun main() {
     //como se ve en el ejemplo siguiente, al no usar la variable radius que esta en el medio
     // de los atributos de la clase, entonces se escribe "_" para indicar que no se usa esa posicion
     // en la sentencia var
-
+    // aca se indica que se saltea este campo , con el "_"
+    //                V
     var (name4,_,galaxy4) = star("sol",12345f,"via lactea")
     println("name4: $name4, galaxy4: $galaxy4 ")
 
+    //componentes
+    //nos permite acceder a los atributos de una clase sin conoces el nombre de cada atributo
+
+    println("componentes de una clase")
+    println("************************")
+
+    println("la variable sol tiene :$sol" )
+    println(" componente1: ${sol.component1()}") // equivale al campo 1 de la clase,  --> name
+    println(" componente2: ${sol.component2()}") // equivale al campo 2 de la clase,  --> radius
 
 }
 
